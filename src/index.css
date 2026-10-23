@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  html[lang="ar"],
+  html[dir="rtl"] {
+    font-family: 'Cairo', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-[#FAFAF9] text-slate-800 antialiased overflow-x-hidden;
+    max-width: 100vw;
+  }
+
+  /* Optical adjustment for Arabic tracking */
+  [dir="rtl"] {
+    letter-spacing: normal !important;
+  }
+}
+
+@keyframes pulseGlowOrange {
+  0%, 100% {
+    box-shadow: 0 0 20px -4px rgba(249, 115, 22, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px 2px rgba(249, 115, 22, 0.6);
+  }
+}
+
+.animate-glow-orange {
+  animation: pulseGlowOrange 3.5s ease-in-out infinite;
+}
+
+/* Accessibility safeguard: Instant transitions for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
