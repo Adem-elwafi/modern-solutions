@@ -348,7 +348,7 @@ export default function Hero() {
                     />
 
                     <motion.path
-                      d="M 270,150 C 240,220 180,240 100,250"
+                      d="M 270,150 C 235,215 175,252 95,252"
                       stroke="url(#stream-a)"
                       strokeWidth="2"
                       strokeLinecap="round"
@@ -412,6 +412,21 @@ export default function Hero() {
                       <circle cx="16" cy="17" r="4" fill="#818cf8" />
                       <text x="28" y="16" fill="#f8fafc" fontSize="10" fontWeight="600" fontFamily="sans-serif">Vector Index</text>
                       <text x="28" y="26" fill="#94a3b8" fontSize="8" fontFamily="monospace">1.2B Synced</text>
+                    </g>
+
+                    {/* Service Node C (Bottom Left: Zero-Trust Security Gateway) */}
+                    <g transform="translate(45, 235)">
+                      <rect
+                        width="96"
+                        height="34"
+                        rx="10"
+                        fill="#0f172a"
+                        stroke="#334155"
+                        strokeWidth="1.5"
+                      />
+                      <circle cx="16" cy="17" r="4" fill="#06b6d4" />
+                      <text x="28" y="16" fill="#f8fafc" fontSize="10" fontWeight="600" fontFamily="sans-serif">Zero-Trust</text>
+                      <text x="28" y="26" fill="#94a3b8" fontSize="8" fontFamily="monospace">mTLS Active</text>
                     </g>
 
                     {/* Telemetry Metric Pill on Curve Apex */}
